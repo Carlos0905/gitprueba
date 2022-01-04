@@ -1,0 +1,24 @@
+<script>
+    var queue = [1,2,3,4,5];
+    var c;
+    var d;
+    c = 6;
+
+    function proximoEnFila(a,b){
+        console.log("Lista antes: " + JSON.stringify(a));
+        a.push(b);
+        var c = a.shift();
+        console.log("Lista despues: " + JSON.stringify(a));
+        return c;
+        
+    }
+    console.log("Elemento eliminado: " + proximoEnFila(queue, c));
+    var queue2 = [23,24,25,26]
+
+    c=27;
+    console.log("Elemento eliminado: " + proximoEnFila(queue2, c));
+    
+    var queue3 = [81,82,83,84]
+    c = 85;
+    console.log("Elemento eliminado: " + proximoEnFila(queue3, c));
+</script>

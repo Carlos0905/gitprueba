@@ -1,0 +1,33 @@
+<script>
+    
+    var coleccionDeDiscos = {
+        7853: {
+            tituloDelAlbum: "Bee Gees Greatest",
+            artista: "Bee Gees",
+            canciones: ["Stayin' Alive"]
+        },
+        5439: {
+            tituloDelAlbum: "ABBA Gold"
+        }
+    };
+    console.log(coleccionDeDiscos);
+    function actualizarDiscos(discos,id,propiedad,valor){
+        
+        if (valor === ""){
+            delete discos[id][propiedad];
+        } else if (propiedad === "canciones"){
+            var verificar = discos[id].hasOwnProperty("canciones");
+            if (verificar){
+                
+                discos[id][propiedad].push(valor);
+            } else{
+                discos[id][propiedad] = [valor];
+            }
+        } else {
+            discos[id][propiedad] = valor;
+        }
+    }
+    
+    actualizarDiscos(coleccionDeDiscos,5439,"canciones","a");
+    console.log(coleccionDeDiscos);
+</script>
